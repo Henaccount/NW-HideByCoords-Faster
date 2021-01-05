@@ -9,13 +9,13 @@ Additionally you can use it in Navisworks (tested with NW Manage 2020). You sele
 
 For the same purpose as above paragraph, but for avoiding to access the Navisworks application during working with ACAD, you can use in ACAD the following script: https://github.com/Henaccount/ClipBox-ACAD-NW which will call this NW script by commandline (hidden).
 
-# preparation of the Navisworks file for use with this script:
+# Preparation of the Navisworks file for use with this script:
 Note that this has just been tested with a metric Navisworks model (units = meter) together with Plant 3D (units = milimeter). For different unit situations, you might need to adjust the code accordingly.
 
 <li>Unhide All in your Navisworks model
 <li>Append to your Navisworks file the "CoordinationClipBox.dwg" which can be downloaded from the root of this repository.
 <li>Create a selection set from the (only) 3D Solid that is contained in the CoordinationClipBox.dwg and name it "clipbox"
-<li>Create a clash check like this, the rest of the settings will be added automatically:
+<li>Create a clash check like this and move it to the very top of the list (if several exist), the rest of the settings will be added automatically:
   
   <img src="https://github.com/Henaccount/NW-HideByCoords-Faster/blob/master/clasher-settings.png?raw=true">
   
