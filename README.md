@@ -7,7 +7,7 @@ Using from batch file can be interesting in the context of "splitting" the NW mo
 
 Additionally you can use it in Navisworks (tested with NW Manage 2020). You select a tree element and execute the script. As a result you will just get the area shown that is covered or touched by the bounding box of the tree element. Also the file will be saved with this visibility state. This can be interesting in the context of attaching the NW model to an ACAD drawing as a "Coordination Model" (by xref GUI). Like this only parts of the NW model will be shown in ACAD for coordination of additional ACAD objects (e.g. pipes).
 
-For the same purpose as above paragraph, but for avoiding to access the Navisworks application during working with ACAD, you can use in ACAD the following script: https://github.com/Henaccount/ClipBox-ACAD-NW which will create a batch file in the documents folder which calls this NW script (silently).
+For the same purpose as above paragraph, but for avoiding to access the Navisworks application during working with ACAD, you can use in ACAD the following script: https://github.com/Henaccount/ClipBox-ACAD-NW which will create and execute a batch file in the documents folder which calls this NW script silently (headless).
 
 
 # Preparation of the Navisworks file for use with this script:
