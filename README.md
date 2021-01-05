@@ -9,6 +9,7 @@ Additionally you can use it in Navisworks (tested with NW Manage 2020). You sele
 
 For the same purpose as above paragraph, but for avoiding to access the Navisworks application during working with ACAD, you can use in ACAD the following script: https://github.com/Henaccount/ClipBox-ACAD-NW which will call this NW script by commandline (hidden).
 
+
 # Preparation of the Navisworks file for use with this script:
 Note that this has just been tested with a metric Navisworks model (units = meter) together with Plant 3D (units = milimeter). For different unit situations, you might need to adjust the code accordingly.
 
