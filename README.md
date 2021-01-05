@@ -14,6 +14,7 @@ Note that this has just been tested with a metric Navisworks model (units = mete
 
 <li>Unhide All in your Navisworks model
 <li>Append to your Navisworks file the "CoordinationClipBox.dwg" which can be downloaded from the root of this repository.
-Create a clash check, like this:
+<li>Create a selection set from the (only) 3D Solid that is contained in the CoordinationClipBox.dwg
+<li>Create a clash check, like this:
 
 
