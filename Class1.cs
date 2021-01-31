@@ -50,6 +50,7 @@ namespace ClipBox
             string fileoutpath = documentspath + "\\" + "CoordinationModel.nwd";
 
             Document doc = Autodesk.Navisworks.Api.Application.ActiveDocument;
+            double scalefactor = UnitConversion.ScaleFactor(Units.Meters, doc.Units);
 
             DocumentSelectionSets myselectionsets = doc.SelectionSets;
             ModelItemCollection clipbox = new ModelItemCollection();
@@ -81,8 +82,8 @@ namespace ClipBox
             else
             {
                 fileoutpath = @parameters[0];
-                selbbmin = new Point3D(Convert.ToDouble(parameters[1].Replace("neg", "-")), Convert.ToDouble(parameters[2].Replace("neg", "-")), Convert.ToDouble(parameters[3].Replace("neg", "-")));
-                selbbmax = new Point3D(Convert.ToDouble(parameters[4].Replace("neg", "-")), Convert.ToDouble(parameters[5].Replace("neg", "-")), Convert.ToDouble(parameters[6].Replace("neg", "-")));
+                selbbmin = new Point3D(Convert.ToDouble(parameters[1].Replace("neg", "-")) * scalefactor, Convert.ToDouble(parameters[2].Replace("neg", "-")) * scalefactor, Convert.ToDouble(parameters[3].Replace("neg", "-")) * scalefactor);
+                selbbmax = new Point3D(Convert.ToDouble(parameters[4].Replace("neg", "-")) * scalefactor, Convert.ToDouble(parameters[5].Replace("neg", "-")) * scalefactor, Convert.ToDouble(parameters[6].Replace("neg", "-")) * scalefactor);
             }
 
             if (selbbmin.IsOrigin && selbbmax.IsOrigin) {
@@ -92,7 +93,7 @@ namespace ClipBox
 
             string logfile = documentspath + "\\" + Path.GetFileName(fileoutpath) + ".txt";
             List<string> log = new List<string>();
-
+            //log.Add("scalefactor###" + scalefactor);
             //selbbmin = new Point3D(-7.000, 14.000, 17.000);
             //selbbmax = new Point3D(-5.000, 16.000, 19.000);
 
